@@ -6,4 +6,13 @@ async def async_sleep():
     print(f'sleep went well')
 
 
-asyncio.run(async_sleep())
+async def print_hello():
+    print('hello')
+
+
+async def main():
+    await async_sleep()
+    await print_hello()
+
+
+asyncio.run(main())

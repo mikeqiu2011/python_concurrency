@@ -26,6 +26,7 @@ if __name__ == '__main__':
     t1.start()
     t2.start()
 
+    print(t1.name)
     print(threading.active_count())
     print(threading.current_thread())
     print(threading.enumerate() )

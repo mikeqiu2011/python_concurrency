@@ -7,6 +7,7 @@ class MyThread(threading.Thread):
         threading.Thread.__init__(self)
         self.name = name
         self.delay = delay
+        self.start()
 
     def run(self) -> None:
         print(f'start {self.name}')
@@ -23,8 +24,8 @@ if __name__ == '__main__':
     t1 = MyThread('thread1', 1)
     t2 = MyThread('thread2', 2)
 
-    t1.start()
-    t2.start()
+    # t1.start()
+    # t2.start()
 
     print(t1.name)
     print(threading.active_count())

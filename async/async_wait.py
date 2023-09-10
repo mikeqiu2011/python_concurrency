@@ -12,7 +12,7 @@ async def main():
         pending.add(asyncio.create_task(async_sleep(i+1)))
 
     while len(pending) > 0:
-        done, pending = await asyncio.wait(pending, return_when='ALL_COMPLETED')
+        done, pending = await asyncio.wait(pending, return_when='FIRST_COMPLETED')
         print('len done:', len(done))
         for done_task in done:
             print(await done_task)
